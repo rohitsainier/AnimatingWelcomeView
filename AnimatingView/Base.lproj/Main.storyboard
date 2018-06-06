@@ -1,24 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Baskerville.ttc">
+            <string>Baskerville-Bold</string>
+        </array>
+        <array key="CourierNewBold.ttf">
+            <string>CourierNewPS-BoldMT</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimatingView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roger-federer-wallpaper-cropped-wallpapers-hd-wimbledon" translatesAutoresizingMaskIntoConstraints="NO" id="Etx-F3-pNx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cP-Kh-JaS">
+                                <rect key="frame" x="12.5" y="158.5" width="350" height="350"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2g6-wd-v8i">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AfR-xP-fKj">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaN-c2-ac0">
+                                                    <rect key="frame" x="20" y="20" width="310" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="BgB-rH-dRa"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="25"/>
+                                                    <color key="textColor" red="0.57919406890000003" green="0.10083698815878379" blue="0.41223587024697383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vI-cc-XmR">
+                                                    <rect key="frame" x="100" y="180" width="150" height="150"/>
+                                                    <color key="backgroundColor" red="0.082351545522634739" green="0.21356152411814763" blue="0.31444321065989844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="CFD-9C-x8D"/>
+                                                        <constraint firstAttribute="width" constant="150" id="JjP-QM-Dht"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
+                                                    <state key="normal" title="Hola Amigo">
+                                                        <color key="titleColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="75"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="holaAmigosBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mA2-Af-mQW"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xaN-c2-ac0" firstAttribute="leading" secondItem="AfR-xP-fKj" secondAttribute="leading" constant="20" id="1mM-rK-WHo"/>
+                                                <constraint firstItem="7vI-cc-XmR" firstAttribute="centerX" secondItem="AfR-xP-fKj" secondAttribute="centerX" id="EMY-LU-JUJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="7vI-cc-XmR" secondAttribute="bottom" constant="20" id="NyU-Xk-nLL"/>
+                                                <constraint firstItem="xaN-c2-ac0" firstAttribute="top" secondItem="AfR-xP-fKj" secondAttribute="top" constant="20" id="fRj-VC-xRY"/>
+                                                <constraint firstAttribute="trailing" secondItem="xaN-c2-ac0" secondAttribute="trailing" constant="20" id="jiJ-zc-wlU"/>
+                                            </constraints>
+                                        </view>
+                                        <blurEffect style="light"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="JDa-Rl-co4"/>
+                                    <constraint firstItem="2g6-wd-v8i" firstAttribute="height" secondItem="1cP-Kh-JaS" secondAttribute="height" id="PQf-ml-5gO"/>
+                                    <constraint firstAttribute="height" constant="350" id="fCd-dG-zMe"/>
+                                    <constraint firstItem="2g6-wd-v8i" firstAttribute="width" secondItem="1cP-Kh-JaS" secondAttribute="width" id="jnx-hk-scD"/>
+                                    <constraint firstItem="2g6-wd-v8i" firstAttribute="centerX" secondItem="1cP-Kh-JaS" secondAttribute="centerX" id="pWL-kz-P7q"/>
+                                    <constraint firstItem="2g6-wd-v8i" firstAttribute="centerY" secondItem="1cP-Kh-JaS" secondAttribute="centerY" id="sXq-f4-WNH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Etx-F3-pNx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5ZJ-ri-hmT"/>
+                            <constraint firstItem="1cP-Kh-JaS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7aY-PP-LZz"/>
+                            <constraint firstItem="1cP-Kh-JaS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QcL-Ib-B9A"/>
+                            <constraint firstItem="Etx-F3-pNx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UgR-6p-Qwc"/>
+                            <constraint firstItem="Etx-F3-pNx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UyM-QY-uYk"/>
+                            <constraint firstItem="Etx-F3-pNx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fGf-HT-lsp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bgImage" destination="Etx-F3-pNx" id="2QT-5w-VxE"/>
+                        <outlet property="bgView" destination="1cP-Kh-JaS" id="g67-zd-h0d"/>
+                        <outlet property="bgViewConstraint" destination="QcL-Ib-B9A" id="cnT-NB-qqc"/>
+                        <outlet property="blurView" destination="2g6-wd-v8i" id="U6s-AY-cy2"/>
+                        <outlet property="holaBtn" destination="7vI-cc-XmR" id="fGu-5w-PdV"/>
+                        <outlet property="welcomeLbl" destination="xaN-c2-ac0" id="rOk-Cu-QFY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="roger-federer-wallpaper-cropped-wallpapers-hd-wimbledon" width="960" height="540"/>
+    </resources>
 </document>

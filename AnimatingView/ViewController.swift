@@ -9,17 +9,61 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var bgViewConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bgImage: UIImageView!
+    @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var welcomeLbl: UILabel!
+    
+    @IBOutlet weak var holaBtn: UIButton!
+    @IBOutlet weak var blurView: UIVisualEffectView!
+   
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.startAnimation()
+       
+    }
+    
+    func startAnimation(){
+        bgViewConstraint.constant = -195
+        
+        for i in [bgImage,bgView,welcomeLbl,holaBtn]{
+            i?.alpha = 0
+        }
+        UIView.animate(withDuration: 1, animations: {
+            self.bgImage.alpha = 1
+        }) { (true) in
+            self.animateBgView()
+        }
+    }
+    
+    func animateBgView() {
+        UIView.animate(withDuration: 2, animations: {
+            self.bgView.alpha = 1
+            self.bgViewConstraint.constant = 0
+            self.view.layoutIfNeeded()
+        }) { (true) in
+            self.animateLabel()
+        }
+    }
+    
+    func animateLabel(){
+        UIView.animate(withDuration: 1, animations: {
+            self.welcomeLbl.alpha = 1
+        }) { (true) in
+            self.animateButton()
+        }
+    }
+    
+    func animateButton(){
+        UIView.animate(withDuration: 1) {
+            self.holaBtn.alpha = 1
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func holaAmigosBtnPressed(_ sender: UIButton) {
+        
+        self.startAnimation()
     }
-
-
+    
 }
 
